@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@plugin "daisyui";
+body {
+  background: url(../public/bg.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar {
+    width:6px;
+}
+
+::-webkit-scrollbar-track {
+   background-color: #aliceblue;
+}
+
+::-webkit-scrollbar-thumb {
+   border-radius: 10px;
+    background: #000;
+}
