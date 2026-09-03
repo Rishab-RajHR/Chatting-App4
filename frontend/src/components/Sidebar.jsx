@@ -28,7 +28,7 @@ const Sidebar = () => {
       e.preventDefault();
       const conversationUser = otherUsers?.find((user)=> user.fullName.toLowerCase().includes(search.toLowerCase()));
       if(conversationUser){
-        dispatch(setOtherUsers([conversationUser]));
+        dispatch(setOtherUsers(null));
       }else {
           toast.error("User not found!")
       }
