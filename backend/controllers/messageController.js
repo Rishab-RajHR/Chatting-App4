@@ -27,6 +27,8 @@ export const sendMessage = async (req, res) => {
             gotConversation.messages.push(newMessage._id);
          };
          await gotConversation.save();
+         await newMessage.save();
+         await Promise.all([gotConversation.save(), newMessage.save()]);
 
          // SOCKET IO
          const receiverSocketId  = getReceiverSocketId(receiverId);
